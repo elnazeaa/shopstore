@@ -1,7 +1,7 @@
 import React from "react";
 
 const ArticlePage = (props) => {
-  return <></>;
+  return <>Article Page</>;
 };
 
 export default ArticlePage;
