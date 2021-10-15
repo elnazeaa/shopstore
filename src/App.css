@@ -26,10 +26,12 @@
 
 body {
   font-family: "Zilla Slab", serif;
-  background: var(--clr-white);
+  background: #f4ae3f12;
   color: var(--clr-grey-1);
   line-height: 1.5;
   font-size: 0.875rem;
+  overflow: hidden;
+  background-image: url();
 }
 
 ul {

@@ -13,7 +13,7 @@ const Navbar = (props) => {
     <NavContainer>
       <div className="nav-center">
         <div className="nav-header">
-          <Link to="/home">
+          <Link to="/">
             <img src={logo} alt="Modern Furniture and design" />
           </Link>
           <button className="nav-toggle" type="button" onClick={handleClick}>
@@ -76,8 +76,13 @@ const NavContainer = styled.nav`
       display: none;
     }
     .nav-center {
-      display: grid;
+      ${
+        "" /* display: grid;
       grid-template-columns: auto 1fr auto;
+      align-items: center; */
+      }
+      display: flex;
+      justify-content: flex-start;
       align-items: center;
     }
     .nav-links {
