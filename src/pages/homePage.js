@@ -1,5 +1,5 @@
 import React from "react";
-import { Furnish, Header, Services } from "../components/index";
+import { Furnish, Header, Services, ClientsSlider } from "../components/index";
 
 const HomePage = (props) => {
   return (
@@ -7,6 +7,7 @@ const HomePage = (props) => {
       <Header />
       <Furnish />
       <Services />
+      <ClientsSlider />
     </>
   );
 };
