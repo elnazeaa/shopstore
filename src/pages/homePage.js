@@ -1,11 +1,12 @@
 import React from "react";
-import { Furnish, Header } from "../components/index";
+import { Furnish, Header, Services } from "../components/index";
 
 const HomePage = (props) => {
   return (
     <>
       <Header />
       <Furnish />
+      <Services />
     </>
   );
 };
