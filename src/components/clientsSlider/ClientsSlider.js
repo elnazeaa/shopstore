@@ -42,7 +42,7 @@ const Wrapper = styled.div`
 
   .section {
     width: 90vw;
-    margin: 5rem auto;
+    margin: 5rem auto 0 auto;
     max-width: 1170px;
   }
 

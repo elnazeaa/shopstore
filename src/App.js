@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import "./App.css";
-import { Navbar, SideBar } from "./components/index";
+import { Navbar, SideBar, Footer } from "./components/index";
 import {
   HomePage,
   AboutPage,
@@ -32,6 +32,7 @@ const App = (props) => {
           <ArticlePage />
         </Route>
       </Switch>
+      <Footer />
     </BrowserRouter>
   );
 };
