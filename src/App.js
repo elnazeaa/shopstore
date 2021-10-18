@@ -8,6 +8,7 @@ import {
   Products,
   FaqPage,
   ArticlePage,
+  Error,
 } from "./pages/index";
 import SingleArticlePage from "./pages/singleArticlePage";
 
@@ -34,6 +35,9 @@ const App = (props) => {
         </Route>
         <Route path="/posts/:id">
           <SingleArticlePage />
+        </Route>
+        <Route path="*">
+          <Error />
         </Route>
       </Switch>
       <Footer />
