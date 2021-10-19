@@ -11,6 +11,9 @@ import OneFaq from "./faq/OneFaq";
 import Search from "./faq/Search";
 import Article from "./articles/Articles";
 import SingleArticle from "./articles/SingleArticle";
+import Loading from "./loader/Loading";
+import FeaturedProduct from "./featuredProduct/FeaturedProduct";
+import FeaturePr from "./featuredProduct/FeaturePr";
 export {
   Navbar,
   SideBar,
@@ -25,4 +28,7 @@ export {
   Search,
   Article,
   SingleArticle,
+  Loading,
+  FeaturedProduct,
+  FeaturePr,
 };

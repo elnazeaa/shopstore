@@ -7,7 +7,6 @@ const ClientsSlider = (props) => {
   const [slide, setSlide] = useState(items);
   const [index, setIndex] = useState(0);
   const btns = [0, 1, 2, 3];
-  console.log(index);
   return (
     <Wrapper className="cont">
       <section className="section">
