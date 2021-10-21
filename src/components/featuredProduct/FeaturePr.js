@@ -6,7 +6,6 @@ import { Link } from "react-router-dom";
 import formatNumberToPrice from "../../utils/helper";
 
 const FeaturePr = ({ featurePr }) => {
-  console.log(featurePr);
   const { name, price, image, id } = featurePr;
   return (
     <Wrapper>

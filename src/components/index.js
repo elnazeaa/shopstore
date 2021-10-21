@@ -14,6 +14,10 @@ import SingleArticle from "./articles/SingleArticle";
 import Loading from "./loader/Loading";
 import FeaturedProduct from "./featuredProduct/FeaturedProduct";
 import FeaturePr from "./featuredProduct/FeaturePr";
+import FilterAsideSection from "./filters/FilterAsideSection";
+import FilterContent from "./filters/FilterContent";
+import HeaderOnFilter from "./filters/HeaderOnFilter";
+import ListDetails from "./filters/ListDetails";
 export {
   Navbar,
   SideBar,
@@ -31,4 +35,8 @@ export {
   Loading,
   FeaturedProduct,
   FeaturePr,
+  FilterAsideSection,
+  FilterContent,
+  HeaderOnFilter,
+  ListDetails,
 };

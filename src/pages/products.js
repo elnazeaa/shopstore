@@ -1,7 +1,33 @@
 import React from "react";
+import styled from "styled-components";
+import { FilterContent, FilterAsideSection } from "../components/index";
 
 const Products = (props) => {
-  return <>Product Page</>;
+  return (
+    <main>
+      <Wrapper className="page">
+        <div className="section-center products">
+          <FilterAsideSection />
+          <div>
+            <FilterContent />
+          </div>
+        </div>
+      </Wrapper>
+    </main>
+  );
 };
+
+const Wrapper = styled.div`
+  .products {
+    display: grid;
+    gap: 3rem 1.5rem;
+    margin: 4rem auto;
+  }
+  @media (min-width: 768px) {
+    .products {
+      grid-template-columns: 200px 1fr;
+    }
+  }
+`;
 
 export default Products;

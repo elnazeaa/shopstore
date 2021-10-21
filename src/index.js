@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 import App from "./App";
 import ArticleContextProvider from "./contexts/ArticleContext";
 import FaqProvider from "./contexts/FaqContext";
+import FilterContextProvider from "./contexts/FilterContext";
 import NavContextApiProvider from "./contexts/NavContextApi";
 import ProductContextProvider from "./contexts/Products";
 
@@ -12,7 +13,9 @@ ReactDOM.render(
       <FaqProvider>
         <ArticleContextProvider>
           <ProductContextProvider>
-            <App />
+            <FilterContextProvider>
+              <App />
+            </FilterContextProvider>
           </ProductContextProvider>
         </ArticleContextProvider>
       </FaqProvider>
