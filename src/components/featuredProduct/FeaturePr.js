@@ -5,6 +5,7 @@ import { FaSearch } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import formatNumberToPrice from "../../utils/helper";
 
+// Sinle Feature
 const FeaturePr = ({ featurePr }) => {
   const { name, price, image, id } = featurePr;
   return (

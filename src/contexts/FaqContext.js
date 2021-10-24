@@ -5,12 +5,14 @@ import faqs from "../utils/infos";
 export const FaqContext = createContext();
 
 const FaqProvider = (props) => {
+  // inital Values
   const initalState = {
     faqs: [],
     searchTerm: "",
     filterResult: [],
   };
 
+  // use Reducer to connect data and functionality
   const [state, dispatch] = useReducer(faqReducer, initalState);
 
   const fetchInfos = () => {
@@ -27,9 +29,7 @@ const FaqProvider = (props) => {
   };
 
   const searchFaqAndFilterTerm = () => {
-    let linksExtracts = state.faqs.map((items) => {
-      console.log(items);
-    });
+    let linksExtracts = state.faqs.map((items) => {});
 
     console.log(linksExtracts);
   };

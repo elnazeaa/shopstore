@@ -5,13 +5,13 @@ import { Navbar, SideBar, Footer } from "./components/index";
 import {
   HomePage,
   AboutPage,
-  Products,
+  ProductsPage,
   FaqPage,
   ArticlePage,
   Error,
   SingleProduct,
+  SingleArticlePage,
 } from "./pages/index";
-import SingleArticlePage from "./pages/singleArticlePage";
 
 const App = (props) => {
   return (
@@ -26,7 +26,7 @@ const App = (props) => {
           <AboutPage />
         </Route>
         <Route path="/products">
-          <Products />
+          <ProductsPage />
         </Route>
         <Route path="/faq">
           <FaqPage />

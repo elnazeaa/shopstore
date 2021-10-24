@@ -1,15 +1,23 @@
-import React from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
-import { FilterContent, FilterAsideSection } from "../components/index";
+import {
+  Sort,
+  AsideFilterSection,
+  GridView,
+  ListView,
+} from "../components/index";
+import { FilterContext } from "../contexts/FilterContext";
 
-const Products = (props) => {
+const ProductsPage = (props) => {
+  const { gridView } = useContext(FilterContext);
   return (
     <main>
       <Wrapper className="page">
         <div className="section-center products">
-          <FilterAsideSection />
+          <AsideFilterSection />
           <div>
-            <FilterContent />
+            <Sort />
+            {gridView ? <GridView /> : <ListView />}
           </div>
         </div>
       </Wrapper>
@@ -30,4 +38,4 @@ const Wrapper = styled.div`
   }
 `;
 
-export default Products;
+export default ProductsPage;

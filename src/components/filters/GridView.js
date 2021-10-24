@@ -1,17 +1,18 @@
 import React, { useContext } from "react";
+import { FilterContext } from "../../contexts/FilterContext";
 import styled from "styled-components";
 import { FeaturePr } from "../../components/index";
-import { FilterContext } from "../../contexts/FilterContext";
 
+// Grid View
 const GridView = (props) => {
-  const { all_products } = useContext(FilterContext);
-  if (all_products.length === 0) {
-    return <p>ther is no result</p>;
+  const { filterProducts } = useContext(FilterContext);
+  if (filterProducts.length === 0) {
+    return <p>There is no result</p>;
   }
   return (
     <Wrapper>
       <div className="products-container">
-        {all_products.map((featurePr) => {
+        {filterProducts.map((featurePr) => {
           return <FeaturePr key={featurePr.id} featurePr={featurePr} />;
         })}
       </div>

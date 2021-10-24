@@ -1,11 +1,12 @@
 import React, { useContext } from "react";
 import styled from "styled-components";
-import { BsFillGridFill } from "react-icons/bs";
-import { HiViewList } from "react-icons/hi";
+import { GrMenu, GrProjects } from "react-icons/gr";
 import { FilterContext } from "../../contexts/FilterContext";
 
-const HeaderOnFilter = (props) => {
-  const { all_products, handleGrid, handleList, gridView, handleSortOptions } =
+// Sort Section
+const Sort = (props) => {
+  // params From FilterContext
+  const { filterProducts, handleGrid, gridView, sortItems, sort_val } =
     useContext(FilterContext);
   return (
     <Wrapper>
@@ -16,26 +17,26 @@ const HeaderOnFilter = (props) => {
           }}
           className={gridView ? "active" : ""}
         >
-          <BsFillGridFill />
+          <GrProjects />
         </button>
         <button
           onClick={() => {
-            handleList("list");
+            handleGrid("list");
           }}
           className={!gridView ? "active" : ""}
         >
-          <HiViewList />
+          <GrMenu />
         </button>
       </div>
-      <p>{all_products.length} products found</p>
+      <p>{filterProducts.length} products found</p>
       <hr />
       <form>
         <label htmlFor="sort">sort by</label>
         <select
           name="sort"
-          id="sort"
           className="sort-input"
-          onChange={handleSortOptions}
+          onChange={sortItems}
+          value={sort_val}
         >
           <option value="price-lowest">price (lowest)</option>
           <option value="price-highest">price (highest)</option>
@@ -80,7 +81,7 @@ const Wrapper = styled.section`
     button {
       background: transparent;
       border: 1px solid #000;
-      color: #f4ae3f;
+      color: #000;
       width: 1.5rem;
       border-radius: var(--radius);
       height: 1.5rem;
@@ -93,8 +94,8 @@ const Wrapper = styled.section`
       }
     }
     .active {
-      background: #000 !important;
-      color: #f4ae3f !important;
+      background: #f4ae3f;
+      color: #000;
     }
   }
 
@@ -109,4 +110,5 @@ const Wrapper = styled.section`
     text-transform: capitalize;
   }
 `;
-export default HeaderOnFilter;
+
+export default Sort;

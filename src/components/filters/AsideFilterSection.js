@@ -1,18 +1,27 @@
 import React, { useContext } from "react";
-import styled from "styled-components";
 import { FilterContext } from "../../contexts/FilterContext";
+import styled from "styled-components";
+import formatNumberToPrice from "../../utils/helper";
 
-const FilterAsideSection = (props) => {
-  const { all_products } = useContext(FilterContext);
+// Aside Component for Filter
+const AsideFilterSection = (props) => {
+  const {
+    all_products,
+    getFilterValues,
+    clearFilters,
+    filters: { text, category, price, max_price, min_price },
+  } = useContext(FilterContext);
 
-  const onlyCategory = [
+  // filter to avoid repeating values
+  // Filter Products
+  const onlyCategories = [
     "all",
-    ...new Set(all_products.map((cat) => cat.category)),
+    ...new Set(all_products.map((item) => item.category)),
   ];
 
-  const onlyCompany = [
+  const onlyCompanies = [
     "all",
-    ...new Set(all_products.map((com) => com.company)),
+    ...new Set(all_products.map((item) => item.company)),
   ];
 
   const onlyColors = [
@@ -20,28 +29,34 @@ const FilterAsideSection = (props) => {
     ...new Set(all_products.map((item) => item.colors).flat()),
   ];
 
+  // content
   return (
     <Wrapper>
       <div className="content">
-        <form
-          onSubmit={(e) => {
-            e.preventDefault();
-          }}
-        >
+        <form onSubmit={(e) => e.preventDefault()}>
           <div className="form-control">
             <input
               type="text"
-              name=""
-              placeholder="Search..."
+              name="text"
               className="search-input"
+              placeholder="Search..."
+              value={text}
+              onChange={getFilterValues}
             />
           </div>
           <div className="form-control">
-            <h5>category</h5>
+            <h5>Category</h5>
             <div>
-              {onlyCategory.map((item, index) => {
+              {onlyCategories.map((item, index) => {
                 return (
-                  <button type="button" name="category" key={index}>
+                  <button
+                    type="button"
+                    name="category"
+                    key={index}
+                    className={item === category ? "active" : ""}
+                    value={category}
+                    onClick={getFilterValues}
+                  >
                     {item}
                   </button>
                 );
@@ -49,11 +64,15 @@ const FilterAsideSection = (props) => {
             </div>
           </div>
           <div className="form-control">
-            <h5>company</h5>
-            <select name="company" id="company">
-              {onlyCompany.map((item, index) => {
+            <h5>Company</h5>
+            <select
+              name="company"
+              className="company"
+              onClick={getFilterValues}
+            >
+              {onlyCompanies.map((item, index) => {
                 return (
-                  <option key={index} value={item}>
+                  <option value={item} key={index}>
                     {item}
                   </option>
                 );
@@ -61,33 +80,62 @@ const FilterAsideSection = (props) => {
             </select>
           </div>
           <div className="form-control">
-            <h5>colors</h5>
+            <h5>Colors</h5>
             <div className="colors">
-              {onlyColors.map((item, index) => {
-                if (item === "all") {
-                  return (
-                    <button data-color="all" key={index}>
-                      {item}
-                    </button>
-                  );
-                } else {
+              {onlyColors.map((col, index) => {
+                if (col === "all") {
                   return (
                     <button
+                      type="button"
+                      name="color"
+                      data-color="all"
+                      className="all-btn"
                       key={index}
-                      data-color={item}
-                      className="color-btn"
-                      style={{ backgroundColor: item }}
-                    ></button>
+                      onClick={getFilterValues}
+                    >
+                      {col}
+                    </button>
                   );
                 }
+                return (
+                  <button
+                    key={index}
+                    type="color"
+                    name="color"
+                    data-color={col}
+                    style={{ backgroundColor: col }}
+                    className="color-btn"
+                    onClick={getFilterValues}
+                  ></button>
+                );
               })}
             </div>
           </div>
+          <div class="form-control">
+            <h5>price</h5>
+            <p class="price">{formatNumberToPrice(price)}</p>
+            <input
+              type="range"
+              name="price"
+              min={min_price}
+              max={max_price}
+              value={price}
+              onChange={getFilterValues}
+            />
+          </div>
           <div className="form-control shipping">
             <label htmlFor="shipping">free shipping</label>
-            <input type="checkbox" name="shipping" id="shipping" />
+            <input
+              type="checkbox"
+              name="shipping"
+              id="shipping"
+              onChange={getFilterValues}
+            />
           </div>
         </form>
+        <button type="button" className="clear-btn" onClick={clearFilters}>
+          Clear Filters
+        </button>
       </div>
     </Wrapper>
   );
@@ -179,8 +227,8 @@ const Wrapper = styled.section`
     font-size: 1rem;
   }
   .clear-btn {
-    background: var(--clr-red-dark);
-    color: var(--clr-white);
+    background: #f4ae3f;
+    color: black;
     padding: 0.25rem 0.5rem;
     border-radius: var(--radius);
   }
@@ -192,4 +240,4 @@ const Wrapper = styled.section`
   }
 `;
 
-export default FilterAsideSection;
+export default AsideFilterSection;

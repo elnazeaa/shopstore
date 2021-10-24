@@ -7,6 +7,8 @@ import { Link } from "react-router-dom";
 
 const FeaturedProduct = (props) => {
   const { featurePrducts, loading } = useContext(ProductContext);
+
+  //If loading is true then loader starts spinnig
   if (loading) {
     return (
       <Wrapper className="section">
@@ -18,6 +20,7 @@ const FeaturedProduct = (props) => {
       </Wrapper>
     );
   }
+  // if Loader is false
   return (
     <Wrapper className="section">
       <div className="title">

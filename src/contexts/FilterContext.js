@@ -5,45 +5,96 @@ import { ProductContext } from "./Products";
 export const FilterContext = createContext();
 
 const FilterContextProvider = (props) => {
-  const initialState = {
-    all_products: [],
-    gridView: true,
-    filterProducts: [],
-    sortTerm: "price-lowest",
-    filterPrs: {
-      searchTerm: "",
-      category: "",
-      company: "",
-      color: "",
-      price: 0,
-      min_price: 0,
-      max_price: 0,
-    },
-  };
-  const [state, dispatch] = useReducer(filterReducer, initialState);
+  // Get All Products from Products.js
+  // to get and use we have to use "useEffect"
   const { products } = useContext(ProductContext);
 
+  // initialized values
+  const initialState = {
+    all_products: [],
+    filterProducts: [],
+    loading: false,
+    gridView: true,
+    sort_val: "price-lowest",
+    filters: {
+      text: "",
+      category: "all",
+      company: "all",
+      color: "all",
+      price: 0,
+      max_price: 0,
+      min_price: 0,
+      shipping: false,
+    },
+  };
+
+  const [state, dispatch] = useReducer(filterReducer, initialState);
+
+  // to get All Products
   useEffect(() => {
-    dispatch({ type: "GET_ALL_PRODUCTS", payload: products });
+    getProducts();
+  }, [products]);
+
+  // For Filter And Sort
+  // order is important if Sort uses first Filter wont work
+  useEffect(() => {
+    dispatch({ type: "FILTER" });
     dispatch({ type: "SORT" });
-  }, [products, state.sortTerm]);
+  }, [products, state.sort_val, state.filters]);
 
+  // function to get all products
+  const getProducts = () => {
+    dispatch({ type: "GETS_ALL_PRODUCTS", payload: products });
+    dispatch({ type: "GET_PRICES" });
+  };
+
+  // Grid Views
   const handleGrid = (grid) => {
-    dispatch({ type: "GRID_VIEW" });
+    if (grid === "grid") {
+      dispatch({ type: "GRID_VIEW" });
+    } else {
+      dispatch({ type: "LIST_VIEW" });
+    }
   };
 
-  const handleList = (list) => {
-    dispatch({ type: "LIST_VIEW" });
+  // Get Sort Value
+  const sortItems = (e) => {
+    let sort_Val = e.target.value;
+    dispatch({ type: "GET_SORT_VALUES", payload: sort_Val });
   };
 
-  const handleSortOptions = (e) => {
-    const sortValue = e.target.value;
-    dispatch({ type: "Get_SORT_TERM", payload: sortValue });
+  // Apply Finctionality to work
+  const getFilterValues = (e) => {
+    const fil_name = e.target.name;
+    let fil_val;
+    if (fil_name === "text") {
+      fil_val = e.target.value;
+    }
+    if (fil_name === "category") {
+      fil_val = e.target.textContent;
+    }
+    if (fil_name === "company") {
+      fil_val = e.target.value;
+    }
+    if (fil_name === "color") {
+      fil_val = e.target.dataset.color;
+    }
+    if (fil_name === "shipping") {
+      fil_val = e.target.checked;
+    }
+    if (fil_name === "price") {
+      fil_val = e.target.value;
+    }
+    dispatch({ type: "SET_FILTER_VALUE", payload: { fil_name, fil_val } });
+  };
+
+  const clearFilters = () => {
+    dispatch({ type: "CLEAR_FILTERS" });
   };
 
   return (
     <FilterContext.Provider
-      value={{ ...state, handleGrid, handleList, handleSortOptions }}
+      value={{ ...state, handleGrid, sortItems, getFilterValues, clearFilters }}
     >
       {props.children}
     </FilterContext.Provider>

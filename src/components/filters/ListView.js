@@ -1,14 +1,15 @@
 import React, { useContext } from "react";
-import styled from "styled-components";
 import { FilterContext } from "../../contexts/FilterContext";
-import { ListDetails } from "../../components/index";
+import styled from "styled-components";
+import { ListViewDetail } from "../../components/index";
 
+// List View
 const ListView = (props) => {
-  const { all_products } = useContext(FilterContext);
+  const { filterProducts } = useContext(FilterContext);
   return (
     <Wrapper>
-      {all_products.map((item) => {
-        return <ListDetails key={item.id} item={item} />;
+      {filterProducts.map((items) => {
+        return <ListViewDetail key={items.id} items={items} />;
       })}
     </Wrapper>
   );
@@ -18,8 +19,7 @@ const Wrapper = styled.section`
   display: grid;
   row-gap: 3rem;
 
-  ${
-    "" /* img {
+  img {
     width: 100%;
     display: block;
     width: 300px;
@@ -50,7 +50,6 @@ const Wrapper = styled.section`
       column-gap: 2rem;
       align-items: center;
     }
-  } */
   }
 `;
 
