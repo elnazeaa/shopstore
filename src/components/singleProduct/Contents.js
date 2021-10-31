@@ -43,7 +43,7 @@ const Content = ({ singleProduct }) => {
         {shipping ? "Free Shipping" : "Not Free"}
       </p>
       <hr />
-      <AddToCart singleProduct={singleProduct} />
+      <AddToCart singleProduct={singleProduct} colors={colors} />
     </Wrapper>
   );
 };

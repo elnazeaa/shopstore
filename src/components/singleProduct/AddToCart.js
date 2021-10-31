@@ -4,14 +4,15 @@ import { AmountBtn } from "../../components/index";
 import { Link } from "react-router-dom";
 import { FaCheck } from "react-icons/fa";
 import { SingleProductContext } from "../../contexts/SingleProductContext";
+import Loading from "../loader/Loading";
 
-const AddToCart = ({ singleProduct }) => {
+const AddToCart = ({ singleProduct, colors = [""] }) => {
+  // i use colors=[""] , if didn't, refresh always returns error
   let {
     id,
     stock,
     price,
     featured,
-    colors,
     category,
     images,
     reviews,
@@ -21,7 +22,7 @@ const AddToCart = ({ singleProduct }) => {
     company,
   } = singleProduct;
 
-  const { addItemsToCartPage } = useContext(SingleProductContext);
+  const { addItemsToCartPage, loading } = useContext(SingleProductContext);
 
   const [number, setNumber] = useState(1);
   let [keepColor, setKeepColor] = useState(colors[0]);
@@ -49,6 +50,10 @@ const AddToCart = ({ singleProduct }) => {
       return oldNumber + 1;
     });
   };
+
+  if (singleProduct.length === 0 || colors.length === 0 || loading) {
+    return <Loading />;
+  }
 
   return (
     <Wrapper>
