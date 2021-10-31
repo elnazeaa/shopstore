@@ -11,6 +11,7 @@ import {
   Error,
   SingleProduct,
   SingleArticlePage,
+  CartPage,
 } from "./pages/index";
 
 const App = (props) => {
@@ -39,6 +40,9 @@ const App = (props) => {
         </Route>
         <Route path="/product/:id">
           <SingleProduct />
+        </Route>
+        <Route path="/cart">
+          <CartPage />
         </Route>
         <Route path="*">
           <Error />

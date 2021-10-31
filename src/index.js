@@ -6,6 +6,7 @@ import FaqProvider from "./contexts/FaqContext";
 import FilterContextProvider from "./contexts/FilterContext";
 import NavContextApiProvider from "./contexts/NavContextApi";
 import ProductContextProvider from "./contexts/Products";
+import SingleProductProvider from "./contexts/SingleProductContext";
 
 ReactDOM.render(
   <React.StrictMode>
@@ -14,7 +15,9 @@ ReactDOM.render(
         <ArticleContextProvider>
           <ProductContextProvider>
             <FilterContextProvider>
-              <App />
+              <SingleProductProvider>
+                <App />
+              </SingleProductProvider>
             </FilterContextProvider>
           </ProductContextProvider>
         </ArticleContextProvider>

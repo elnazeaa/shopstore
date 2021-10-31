@@ -6,6 +6,7 @@ import ArticlePage from "./articlePage";
 import Error from "../components/error/Error404";
 import SingleProduct from "../pages/singleProduct";
 import SingleArticlePage from "../pages/singleArticlePage";
+import CartPage from "../pages/cartPage";
 
 export {
   HomePage,
@@ -16,4 +17,5 @@ export {
   Error,
   SingleProduct,
   SingleArticlePage,
+  CartPage,
 };

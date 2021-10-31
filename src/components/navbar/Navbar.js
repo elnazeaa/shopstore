@@ -5,6 +5,7 @@ import logo from "../../images/logo/logo.png";
 import { navLinks } from "../../utils/infos";
 import { FaBars } from "react-icons/fa";
 import { NavContextApi } from "../../contexts/NavContextApi";
+import { ShopNavIcon } from "../../components/index";
 
 const Navbar = (props) => {
   const { handleClick } = useContext(NavContextApi);
@@ -29,6 +30,7 @@ const Navbar = (props) => {
             );
           })}
         </ul>
+        <ShopNavIcon />
       </div>
     </NavContainer>
   );
@@ -39,7 +41,7 @@ const NavContainer = styled.nav`
   height: 7rem;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   box-shadow: -5px 1px 5px #191919;
 
   .nav-center {
@@ -82,7 +84,7 @@ const NavContainer = styled.nav`
       align-items: center; */
       }
       display: flex;
-      justify-content: flex-start;
+      justify-content: space-around;
       align-items: center;
     }
     .nav-links {

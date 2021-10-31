@@ -19,6 +19,15 @@ import Sort from "./filters/Sort";
 import ListView from "./filters/ListView";
 import GridView from "./filters/GridView";
 import ListViewDetail from "./filters/ListViewDetail";
+import Content from "./singleProduct/Contents";
+import Stars from "./stars/Stars";
+import AddToCart from "./singleProduct/AddToCart";
+import Slide from "./singleProduct/Slide";
+import AmountBtn from "./singleProduct/AmountBtn";
+import CartItems from "./singleProduct/CartItems";
+import CartDetails from "./singleProduct/CartDetails";
+import ShopNavIcon from "./navbar/ShopNavIcon";
+import TotalPay from "./singleProduct/TotalPay";
 
 export {
   Navbar,
@@ -42,4 +51,13 @@ export {
   ListView,
   GridView,
   ListViewDetail,
+  Content,
+  Stars,
+  AddToCart,
+  Slide,
+  AmountBtn,
+  CartItems,
+  CartDetails,
+  ShopNavIcon,
+  TotalPay,
 };

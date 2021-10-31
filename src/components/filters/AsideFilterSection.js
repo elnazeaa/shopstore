@@ -111,9 +111,9 @@ const AsideFilterSection = (props) => {
               })}
             </div>
           </div>
-          <div class="form-control">
+          <div className="form-control">
             <h5>price</h5>
-            <p class="price">{formatNumberToPrice(price)}</p>
+            <p className="price">{formatNumberToPrice(price)}</p>
             <input
               type="range"
               name="price"
