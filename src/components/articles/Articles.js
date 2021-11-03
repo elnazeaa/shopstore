@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { ArticleContext } from "../../contexts/ArticleContext";
 import SingleArticle from "./SingleArticle";
 
+// Article Component
 const Article = (props) => {
   const { news } = useContext(ArticleContext);
   return (

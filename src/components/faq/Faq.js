@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { FaqContext } from "../../contexts/FaqContext";
 import FaqDetail from "./FaqDetail";
 
+// Map All Faqs and send All to FaqDetail to show
 const Faq = (props) => {
   const { faqs } = useContext(FaqContext);
   return (

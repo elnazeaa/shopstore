@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { OneFaq } from "../index";
 
 const FaqDetail = ({ faq }) => {
+  // Faq Details that recieved for displaying on web
   return (
     <Wrapper className="info">
       <h3>{faq.page}</h3>
