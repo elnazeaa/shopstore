@@ -4,7 +4,7 @@ export const navLinks = [
   {
     id: 1,
     text: "home",
-    url: "/ecommerce-react-context",
+    url: "/shopstore",
   },
   {
     id: 2,
