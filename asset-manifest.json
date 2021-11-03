@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/ecommerce-react-context/static/css/main.c957faed.chunk.css",
-    "main.js": "/ecommerce-react-context/static/js/main.4b591556.chunk.js",
-    "main.js.map": "/ecommerce-react-context/static/js/main.4b591556.chunk.js.map",
-    "runtime-main.js": "/ecommerce-react-context/static/js/runtime-main.92bd6c4d.js",
-    "runtime-main.js.map": "/ecommerce-react-context/static/js/runtime-main.92bd6c4d.js.map",
-    "static/js/2.0483171c.chunk.js": "/ecommerce-react-context/static/js/2.0483171c.chunk.js",
-    "static/js/2.0483171c.chunk.js.map": "/ecommerce-react-context/static/js/2.0483171c.chunk.js.map",
-    "index.html": "/ecommerce-react-context/index.html",
-    "static/css/main.c957faed.chunk.css.map": "/ecommerce-react-context/static/css/main.c957faed.chunk.css.map",
-    "static/js/2.0483171c.chunk.js.LICENSE.txt": "/ecommerce-react-context/static/js/2.0483171c.chunk.js.LICENSE.txt",
-    "static/media/01.08077132.png": "/ecommerce-react-context/static/media/01.08077132.png",
-    "static/media/furniture.3608f305.png": "/ecommerce-react-context/static/media/furniture.3608f305.png",
-    "static/media/handshake.5ddcaf83.jpg": "/ecommerce-react-context/static/media/handshake.5ddcaf83.jpg",
-    "static/media/room.8118d1f6.jpg": "/ecommerce-react-context/static/media/room.8118d1f6.jpg"
+    "main.css": "./static/css/main.c957faed.chunk.css",
+    "main.js": "./static/js/main.0ac840dc.chunk.js",
+    "main.js.map": "./static/js/main.0ac840dc.chunk.js.map",
+    "runtime-main.js": "./static/js/runtime-main.4dfb6982.js",
+    "runtime-main.js.map": "./static/js/runtime-main.4dfb6982.js.map",
+    "static/js/2.7e2acee8.chunk.js": "./static/js/2.7e2acee8.chunk.js",
+    "static/js/2.7e2acee8.chunk.js.map": "./static/js/2.7e2acee8.chunk.js.map",
+    "index.html": "./index.html",
+    "static/css/main.c957faed.chunk.css.map": "./static/css/main.c957faed.chunk.css.map",
+    "static/js/2.7e2acee8.chunk.js.LICENSE.txt": "./static/js/2.7e2acee8.chunk.js.LICENSE.txt",
+    "static/media/01.08077132.png": "./static/media/01.08077132.png",
+    "static/media/furniture.3608f305.png": "./static/media/furniture.3608f305.png",
+    "static/media/handshake.5ddcaf83.jpg": "./static/media/handshake.5ddcaf83.jpg",
+    "static/media/room.8118d1f6.jpg": "./static/media/room.8118d1f6.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.92bd6c4d.js",
-    "static/js/2.0483171c.chunk.js",
+    "static/js/runtime-main.4dfb6982.js",
+    "static/js/2.7e2acee8.chunk.js",
     "static/css/main.c957faed.chunk.css",
-    "static/js/main.4b591556.chunk.js"
+    "static/js/main.0ac840dc.chunk.js"
   ]
 }
