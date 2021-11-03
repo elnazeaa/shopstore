@@ -20,7 +20,7 @@ const App = (props) => {
       <Navbar />
       <SideBar />
       <Switch>
-        <Route exact path="/">
+        <Route exact path="/ecommerce-react-context">
           <HomePage />
         </Route>
         <Route path="/about">
