@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/elnazeaa/ecommerce-react-context/static/css/main.c957faed.chunk.css",
-    "main.js": "/elnazeaa/ecommerce-react-context/static/js/main.0ac840dc.chunk.js",
-    "main.js.map": "/elnazeaa/ecommerce-react-context/static/js/main.0ac840dc.chunk.js.map",
-    "runtime-main.js": "/elnazeaa/ecommerce-react-context/static/js/runtime-main.4a0779d0.js",
-    "runtime-main.js.map": "/elnazeaa/ecommerce-react-context/static/js/runtime-main.4a0779d0.js.map",
-    "static/js/2.64813f78.chunk.js": "/elnazeaa/ecommerce-react-context/static/js/2.64813f78.chunk.js",
-    "static/js/2.64813f78.chunk.js.map": "/elnazeaa/ecommerce-react-context/static/js/2.64813f78.chunk.js.map",
-    "index.html": "/elnazeaa/ecommerce-react-context/index.html",
-    "static/css/main.c957faed.chunk.css.map": "/elnazeaa/ecommerce-react-context/static/css/main.c957faed.chunk.css.map",
-    "static/js/2.64813f78.chunk.js.LICENSE.txt": "/elnazeaa/ecommerce-react-context/static/js/2.64813f78.chunk.js.LICENSE.txt",
-    "static/media/01.08077132.png": "/elnazeaa/ecommerce-react-context/static/media/01.08077132.png",
-    "static/media/furniture.3608f305.png": "/elnazeaa/ecommerce-react-context/static/media/furniture.3608f305.png",
-    "static/media/handshake.5ddcaf83.jpg": "/elnazeaa/ecommerce-react-context/static/media/handshake.5ddcaf83.jpg",
-    "static/media/room.8118d1f6.jpg": "/elnazeaa/ecommerce-react-context/static/media/room.8118d1f6.jpg"
+    "main.css": "./static/css/main.c957faed.chunk.css",
+    "main.js": "./static/js/main.b46a71ff.chunk.js",
+    "main.js.map": "./static/js/main.b46a71ff.chunk.js.map",
+    "runtime-main.js": "./static/js/runtime-main.6b558bc1.js",
+    "runtime-main.js.map": "./static/js/runtime-main.6b558bc1.js.map",
+    "static/js/2.e8fb1311.chunk.js": "./static/js/2.e8fb1311.chunk.js",
+    "static/js/2.e8fb1311.chunk.js.map": "./static/js/2.e8fb1311.chunk.js.map",
+    "index.html": "./index.html",
+    "static/css/main.c957faed.chunk.css.map": "./static/css/main.c957faed.chunk.css.map",
+    "static/js/2.e8fb1311.chunk.js.LICENSE.txt": "./static/js/2.e8fb1311.chunk.js.LICENSE.txt",
+    "static/media/01.08077132.png": "./static/media/01.08077132.png",
+    "static/media/furniture.3608f305.png": "./static/media/furniture.3608f305.png",
+    "static/media/handshake.5ddcaf83.jpg": "./static/media/handshake.5ddcaf83.jpg",
+    "static/media/room.8118d1f6.jpg": "./static/media/room.8118d1f6.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.4a0779d0.js",
-    "static/js/2.64813f78.chunk.js",
+    "static/js/runtime-main.6b558bc1.js",
+    "static/js/2.e8fb1311.chunk.js",
     "static/css/main.c957faed.chunk.css",
-    "static/js/main.0ac840dc.chunk.js"
+    "static/js/main.b46a71ff.chunk.js"
   ]
 }
