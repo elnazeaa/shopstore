@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Stars } from "../../components/index";
+import Stars from "../../components/singleProduct/Stars";
 import formatNumberToPrice from "../../utils/helper";
 import AddToCart from "./AddToCart";
 
