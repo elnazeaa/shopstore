@@ -24,14 +24,16 @@ function getItems() {
 }
 
 const SingleProductProvider = (props) => {
-  const url = `https://course-api.com/react-store-single-product?id=`;
+  // const url = `https://course-api.com/react-store-single-product?id=`;
 
   const [state, dispatch] = useReducer(singleProductReducer, initialState);
 
   const getSinglePr = async () => {
     try {
       dispatch({ type: "LOADER" });
-      const response = await fetch(`${url}${state.singlePrId}`);
+      const response = await fetch(
+        `https://course-api.com/react-store-single-product?id=${state.singlePrId}`
+      );
       const res = await response.json();
       dispatch({ type: "GET_SINGLE_PRODUCT", payload: res });
     } catch (error) {}
@@ -39,6 +41,7 @@ const SingleProductProvider = (props) => {
 
   useEffect(() => {
     getSinglePr();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [state.singlePrId]);
 
   const getSinglePrId = (singleId) => {

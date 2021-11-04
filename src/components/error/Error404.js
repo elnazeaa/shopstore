@@ -8,7 +8,7 @@ const Error = (props) => {
       <section>
         <h1>404</h1>
         <h3>Sorry, the page you tried cannot be found</h3>
-        <Link class="btn" to="/ecommerce-react-context">
+        <Link class="btn" to="/shopstore">
           back home
         </Link>
       </section>
