@@ -1,5 +1,5 @@
 import React, { createContext, useReducer } from "react";
-import { useEffect } from "react/cjs/react.development";
+import { useEffect, useState } from "react/cjs/react.development";
 import singleProductReducer from "../reducers/singleProductReducer";
 
 export const SingleProductContext = createContext();
@@ -7,7 +7,7 @@ export const SingleProductContext = createContext();
 const initialState = {
   singleProduct: [],
   loading: false,
-  singlePrId: "",
+  singlePrId: "recQ0fMd8T0Vk211E",
   singlePrForCartPage: getItems(),
   subTotal: 0,
   shipping: 534,
@@ -34,6 +34,9 @@ const SingleProductProvider = (props) => {
       const response = await fetch(
         `https://course-api.com/react-store-single-product?id=${state.singlePrId}`
       );
+      if (response.status === 404) {
+        dispatch({ type: "LOADER" });
+      }
       const res = await response.json();
       dispatch({ type: "GET_SINGLE_PRODUCT", payload: res });
     } catch (error) {}

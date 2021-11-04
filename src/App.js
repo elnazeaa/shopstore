@@ -16,7 +16,7 @@ import {
 
 const App = (props) => {
   return (
-    <BrowserRouter basename={window.location.pathname || ""}>
+    <BrowserRouter>
       <Navbar />
       <SideBar />
       <Switch>
