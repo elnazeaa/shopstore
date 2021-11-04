@@ -8,19 +8,7 @@ import Loading from "../loader/Loading";
 
 const AddToCart = ({ singleProduct, colors = [""] }) => {
   // i use colors=[""] , if didn't, refresh always returns error
-  let {
-    id,
-    stock,
-    price,
-    featured,
-    category,
-    images,
-    reviews,
-    stars,
-    name,
-    description,
-    company,
-  } = singleProduct;
+  let { id, stock, price, images, name } = singleProduct;
 
   const { addItemsToCartPage, loading } = useContext(SingleProductContext);
 
