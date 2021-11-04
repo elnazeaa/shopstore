@@ -1,5 +1,4 @@
-import React, { createContext, useReducer } from "react";
-import { useEffect, useState } from "react/cjs/react.development";
+import React, { createContext, useReducer, useEffect } from "react";
 import singleProductReducer from "../reducers/singleProductReducer";
 
 export const SingleProductContext = createContext();
