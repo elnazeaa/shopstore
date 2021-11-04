@@ -6,15 +6,10 @@ import AddToCart from "./AddToCart";
 
 const Content = ({ singleProduct }) => {
   const {
-    id,
     stock,
     price,
-    featured,
     colors,
     category,
-    images,
-    reviews,
-    stars,
     name,
     description,
     company,

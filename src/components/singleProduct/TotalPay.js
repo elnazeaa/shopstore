@@ -4,7 +4,7 @@ import { SingleProductContext } from "../../contexts/SingleProductContext";
 import formatNumberToPrice from "../../utils/helper";
 
 const TotalPay = (props) => {
-  const { totalNumber, subTotal, shipping } = useContext(SingleProductContext);
+  const { subTotal, shipping } = useContext(SingleProductContext);
   return (
     <Wrapper>
       <div>

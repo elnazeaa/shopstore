@@ -13,8 +13,7 @@ const singleProductReducer = (state, action) => {
 
   if (action.type === "ADD_ALL_ITEMS_TO_CART") {
     // idPr: "",namePr: "",colorPr: "", numberPr: "",feePr: "",stocksPr: "",
-    const { number, keepColor, idNum, singlePrName, pricePr, stockPr } =
-      action.payload;
+    const { number, keepColor, idNum, stockPr } = action.payload;
     let tempCheck = state.singlePrForCartPage.find(
       (item) => item.idPr === idNum + keepColor
     );
@@ -90,7 +89,6 @@ const singleProductReducer = (state, action) => {
   }
 
   if (action.type === "COMPUTE_TOTAL_NUMBER_AND_PAYMENT") {
-    let { subTotal, totalNumber, shipping } = state;
     const total = state.singlePrForCartPage.reduce(
       (items, products) => {
         items.totalAmounts += products.numberPr;

@@ -6,7 +6,7 @@ import { BsFillTrash2Fill } from "react-icons/bs";
 import { SingleProductContext } from "../../contexts/SingleProductContext";
 
 const CartDetails = ({ product }) => {
-  const { idPr, namePr, colorPr, numberPr, feePr, stocksPr, image } = product;
+  const { idPr, namePr, colorPr, numberPr, feePr, image } = product;
   const { handleDecrease, handleIncrease, moveToTrash } =
     useContext(SingleProductContext);
 

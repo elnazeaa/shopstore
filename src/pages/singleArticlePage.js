@@ -13,6 +13,7 @@ const SingleArticlePage = (props) => {
   };
   useEffect(() => {
     singleNews();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return (
     <Wrapper>

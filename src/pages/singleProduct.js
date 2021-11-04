@@ -12,20 +12,7 @@ const SingleProduct = (props) => {
   useEffect(() => {
     getSinglePrId(id);
   }, [id]);
-  const {
-    id: imgIndx,
-    stock,
-    price,
-    featured,
-    colors,
-    category,
-    images,
-    reviews,
-    stars,
-    name,
-    description,
-    company,
-  } = singleProduct;
+  const { images } = singleProduct;
   if (loading) {
     return <Loading />;
   }

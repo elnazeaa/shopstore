@@ -9,7 +9,7 @@ const filterReducer = (state, action) => {
 
   if (action.type === "GET_PRICES") {
     let tempPr = state.all_products;
-    let min_price = 0;
+    // let min_price = 0;
     let prices = tempPr.map((item) => item.price);
     let max_price = Math.max(...prices);
     return {
